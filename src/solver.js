@@ -16,6 +16,7 @@ const solveQuadratic = (a, b, c) => {
     };
   } else if (D === 0) {
     return {
+      equation: `Equation is (${a}) x^2 + (${b}) x + (${c}) = 0`,
       message: "There are 1 roots",
       x1: -b / (2 * a),
     };
