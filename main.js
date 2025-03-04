@@ -1,15 +1,18 @@
 "use strict";
 
 import { solveQuadratic } from "./src/solver.js";
-import { inputNumber, rl } from "./src/inputNumber.js";
+import { rl } from "./src/inputNumber.js";
+import { getCoefficients } from "./src/getCoefficients.js";
 
 const main = async () => {
-  const a = await inputNumber("a = ");
-  const b = await inputNumber("b = ");
-  const c = await inputNumber("c = ");
-  rl.close();
-
-  console.log(solveQuadratic(a, b, c));
+  try {
+    const { a, b, c } = await getCoefficients();
+    console.log(solveQuadratic(a, b, c));
+  } catch (error) {
+    console.error(error.message);
+  } finally {
+    rl.close();
+  }
 };
 
 main();
