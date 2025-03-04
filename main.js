@@ -7,8 +7,7 @@ import { getCoefficients } from "./src/getCoefficients.js";
 const main = async () => {
   try {
     const { a, b, c } = await getCoefficients();
-    const result = solveQuadratic(a, b, c);
-    console.log(result);
+    console.log(solveQuadratic(a, b, c));
   } catch (error) {
     console.error(error.message);
   } finally {
