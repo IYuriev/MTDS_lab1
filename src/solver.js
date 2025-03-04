@@ -11,6 +11,7 @@ const solveQuadratic = (a, b, c) => {
   if (D > 0) {
     const sqrtD = Math.sqrt(D);
     return {
+      equation: `Equation is (${a}) x^2 + (${b}) x + (${c}) = 0`,
       message: "There are 2 roots",
       x1: (-b + sqrtD) / (2 * a),
       x2: (-b - sqrtD) / (2 * a),
@@ -23,7 +24,10 @@ const solveQuadratic = (a, b, c) => {
     };
   }
 
-  return { message: "There are 0 roots" };
+  return {
+    equation: `Equation is (${a}) x^2 + (${b}) x + (${c}) = 0`,
+    message: "There are 0 roots",
+  };
 };
 
 export { solveQuadratic };
