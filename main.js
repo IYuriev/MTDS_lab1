@@ -1,3 +1,5 @@
+"use strict";
+
 import { solveQuadratic } from "./src/solver.js";
 import { inputNumber, rl } from "./src/inputNumber.js";
 

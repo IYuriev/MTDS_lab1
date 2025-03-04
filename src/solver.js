@@ -2,7 +2,8 @@
 
 const solveQuadratic = (a, b, c) => {
   if (a === 0) {
-    throw new Error("Error. a cannot be 0");
+    console.error("Error. a cannot be 0");
+    process.exit(1);
   }
 
   const D = b * b - 4 * a * c;
